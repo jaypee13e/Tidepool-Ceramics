@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Tidepool Ceramics</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <span class="logo">Tidepool</span>
+      <button class="cart-btn" id="openCart" aria-label="Open cart">
+        Cart <b id="count">0</b>
+      </button>
+    </header>
+
+    <section class="hero">
+      <h1>Glazed by hand, made for daily use.</h1>
+      <p>
+        Small-batch mugs, bowls and vases, each fired in a glaze named after a
+        stretch of shoreline.
+      </p>
+    </section>
+
+    <div class="toolbar">
+      <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+      <label>
+        Sort
+        <select id="sort">
+          <option value="feat">Featured</option>
+          <option value="lo">Price: low to high</option>
+          <option value="hi">Price: high to low</option>
+        </select>
+      </label>
+    </div>
+
+    <main class="grid" id="grid"></main>
+
+    <div class="scrim" id="scrim"></div>
+
+    <aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
+      <header class="drawer-header">
+        <h2>Your cart</h2>
+        <button class="close-btn" id="closeCart">Close</button>
+      </header>
+
+      <ul class="lines" id="lines"></ul>
+
+      <div class="drawer-footer">
+        <div class="subtotal">
+          <span>Subtotal</span>
+          <span id="sub">$0</span>
+        </div>
+        <button class="pay" id="pay">Place order</button>
+      </div>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
